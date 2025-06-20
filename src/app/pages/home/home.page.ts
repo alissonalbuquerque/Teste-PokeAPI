@@ -26,7 +26,7 @@ class HomePage {
     private pokemonService: PokemonService
   ) {}
 
-  private toMatrix(pokemons: Array<PokemonResume>, size: number = 5) : PokemonResume[][] {
+  private toMatrix(pokemons: Array<PokemonResume>, size: number = 3) : PokemonResume[][] {
     return chunk<PokemonResume>(pokemons, size);
   }
 

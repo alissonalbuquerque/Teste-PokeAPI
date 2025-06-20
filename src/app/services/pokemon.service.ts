@@ -11,7 +11,7 @@ export class PokemonService {
 
   private urlBase : string = `https://pokeapi.co/api/v2`;
   private urlPokemon : string = `${this.urlBase}/pokemon`;
-  
+
   constructor(
     private http: HttpClient
   ) {
@@ -32,11 +32,12 @@ export class PokemonService {
           previous: pokeApi.previous,
           results:  pokeApi.results.map((data) => {
 
-            const id = Number(data.url.match(/\/pokemon\/(\d+)\//)?.[1])
+            const id   = Number(data.url.match(/\/pokemon\/(\d+)\//)?.[1])
+            const name = data?.name ? (data.name.charAt(0).toUpperCase() + data.name.slice(1).toLowerCase()) : ''
 
             return {
               id:               id,
-              name:             data.name,
+              name:             name,
               url:              data.url,
               official_artwork: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
             }
