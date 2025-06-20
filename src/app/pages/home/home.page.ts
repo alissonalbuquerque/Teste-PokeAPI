@@ -49,10 +49,6 @@ class HomePage {
         }
 
         this.pokemons = this.data.results;
-
-        console.log(
-          this.pokemons
-        )
       },
       error: (err) => {
         console.error('Erro ao buscar pokemons', err);
