@@ -14,11 +14,11 @@
   </ion-header>
 
   <ion-grid>
-    <ion-row>
-      
-      <ion-col 
+    <ion-row *ngFor="let arr_pokemon of pokemons">
+
+      <ion-col
         class="ion-text-center"
-        *ngFor="let pokemon of data?.results">
+        *ngFor="let pokemon of arr_pokemon">
 
         <app-pokemon-card
           [name]="pokemon.name"
@@ -27,19 +27,7 @@
 
       </ion-col>
 
-      <!-- <ion-col class="ion-text-center">
-        <app-pokemon-card />
-      </ion-col>
-      <ion-col class="ion-text-center">
-        <app-pokemon-card />
-      </ion-col>
-      <ion-col class="ion-text-center">
-        <app-pokemon-card />
-      </ion-col>
-      <ion-col class="ion-text-center">
-        <app-pokemon-card />
-      </ion-col> -->
     </ion-row>
   </ion-grid>
-  
+
 </ion-content>

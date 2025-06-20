@@ -1,16 +1,24 @@
+import { Pokemon, PokemonResume } from "../types";
 
 interface PokemonListResponse {
   count:    number;
   next:     string | null;
   previous: string | null;
-  results:  Array<{ name: string; url: string }>;
+  results:  Array<Pokemon>;
 }
 
 interface PokemonList {
   count:    number;
   next:     string | null;
   previous: string | null;
-  results:  Array<{ id: number, name: string; url: string, official_artwork: string }>;
+  results:  Array<PokemonResume>;
 }
 
-export { PokemonListResponse, PokemonList }
+interface PokemonListResume {
+  count:    number;
+  next:     string | null;
+  previous: string | null;
+  results:  PokemonResume[][];
+}
+
+export { PokemonListResponse, PokemonList, PokemonListResume }
