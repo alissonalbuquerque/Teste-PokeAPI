@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">PokéDex - Home</ion-title>
@@ -21,6 +22,7 @@
         *ngFor="let pokemon of arr_pokemon">
 
         <app-pokemon-card
+          [id]="pokemon.id"
           [name]="pokemon.name"
           [image]="pokemon.official_artwork">
         </app-pokemon-card>

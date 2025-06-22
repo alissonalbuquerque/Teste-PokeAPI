@@ -1,13 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-title>PokéDex - Detalhes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">details</ion-title>
+      <ion-title>PokéDex - Home</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-grid class="ion-justify-content-center" style="display : flex;">
+
+    <img
+      class="image"
+      [alt]="pokemon?.name"
+      [src]="pokemon?.official_artwork"
+    />
+
+    <!-- #pokemon.id, pokemon.name -->
+    <!-- types . name . & icon -->
+
+  </ion-grid>
+
 </ion-content>

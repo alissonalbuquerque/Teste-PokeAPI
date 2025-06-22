@@ -1,4 +1,4 @@
-import { Pokemon, PokemonResume } from "../types";
+import { Pokemon, PokemonResume, PokemonType } from "../types";
 
 interface PokemonListResponse {
   count:    number;
@@ -21,4 +21,11 @@ interface PokemonListResume {
   results:  PokemonResume[][];
 }
 
-export { PokemonListResponse, PokemonList, PokemonListResume }
+interface PokemonExpand {
+  id : number;
+  name : string;
+  official_artwork: string;
+  types : Array<PokemonType>;
+}
+
+export { PokemonListResponse, PokemonList, PokemonListResume, PokemonExpand }

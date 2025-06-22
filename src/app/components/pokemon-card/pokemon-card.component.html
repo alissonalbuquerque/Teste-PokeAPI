@@ -1,5 +1,5 @@
-<ion-card>
-  <img 
+<ion-card class="clickable" [routerLink]="['/details', id]" routerDirection="forward">
+  <img
     class="image"
     [alt]="name"
     [src]="image"
